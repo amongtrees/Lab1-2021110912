@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class TextReader {
-    public void transformText(String fileLocation, String outputFile){
+    public static void transformText(String fileLocation, String outputFile){
         InputStream is = null;
         OutputStream os = null;
         try {

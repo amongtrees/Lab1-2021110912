@@ -6,7 +6,7 @@ import java.util.Map;
 public class Graph {
     public Graph(){}
 
-    private Map<String, Node> nodes = new HashMap<>();
+    private final Map<String, Node> nodes = new HashMap<>();
 
     /**
      * Add a node to the Graph with the node name, with the default color--black
@@ -53,10 +53,7 @@ public class Graph {
     }
 
     public List<Node> getNodeList(){
-        List<Node> nodeList = new ArrayList<>();
-        for (Node node : nodes.values())
-            nodeList.add(node);
-        return nodeList;
+        return new ArrayList<>(nodes.values());
     }
 
 }

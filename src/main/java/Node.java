@@ -35,6 +35,10 @@ public class Node {
         this.edges.add(e);
     }
 
+    public List<Edge> getEdges(){
+        return edges;
+    }
+
     public Integer findEdgeIndex(String to){
         for (int i = 0; i < this.edges.size(); i++){
             if(this.edges.get(i).to.equals(to)){
