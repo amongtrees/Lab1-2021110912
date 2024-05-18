@@ -45,7 +45,9 @@ public class GraphGen {
         int cnt = 1;
         for (int i = 0; i < edges.size(); i++){
             S = edges.get(i).split(" ");
-            G.addEdge(S[0], S[1], cnt);
+            if (S.length == 2){
+                G.addEdge(S[0], S[1], cnt);
+            }
         }
         if (nodes.size() == 1){
             G.addNode(nodes.get(0));

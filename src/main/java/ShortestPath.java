@@ -70,6 +70,8 @@ public class ShortestPath {
         Node tmpN2 = tmpGraph.getNode(word2);
         int src = tmpGraph.getNodeList().indexOf(tmpN1);
         int dst = tmpGraph.getNodeList().indexOf(tmpN2);
+        if (src == -1 || dst == -1)
+            return null;
         int[] pre_node = Dijkstra(Matrix, src);
         int i = dst;
         StringBuilder S = new StringBuilder();

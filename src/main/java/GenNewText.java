@@ -13,6 +13,8 @@ public class GenNewText {
         for (i = 0; i < L-1; i++){
             Node tmpNode1 = tmpGraph.getNode(S.get(i).toLowerCase());
             Node tmpNode2 = tmpGraph.getNode(S.get(i + 1).toLowerCase());
+            if (tmpNode1 == null || tmpNode2 == null)
+                continue;
             String[] newWords = QueryBridgeWords.queryV2(tmpGraph, tmpNode1.getName(), tmpNode2.getName());
             if (newWords == null)
                 continue;
@@ -32,7 +34,7 @@ public class GenNewText {
         for (String word : S){
             System.out.print(word + " ");
         }
-
+        System.out.println();
         return null;
     }
 
